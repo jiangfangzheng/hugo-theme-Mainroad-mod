@@ -1,0 +1,25 @@
+{{/*归档页面*/}}
+{{ define "main" }}
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        <div class="post-archive">
+            {{ range (where (where .Site.Pages "Type" "post") "Kind" "page").GroupByDate "2006" }}
+            <h2> {{ .Key }}年 </h2>
+            <ul class="listing" style="padding: 10px 0 10px 30px;">
+                {{ range .Pages }}
+                <li>
+                    <date class="meta-date">{{ .Date.Format "01月02日" }}：</date>
+                    <a class="archive-title" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+            <br/>
+            
+        </div>
+    </div>
+</article>
+
+{{ end }}
+
+
