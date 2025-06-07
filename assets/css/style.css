@@ -304,12 +304,17 @@ kbd {
 }
 
 blockquote {
+	color: #666;
 	display: block;
 	padding: 5px 0 5px 15px;
 	margin: 0 0 20px;
 	margin: 0 0 1.25rem;
 	line-height: 1.6;
 	border-left: 5px solid {{ $highlightColor }};
+}
+
+blockquote p {
+	text-indent: 0em;
 }
 
 blockquote p:last-child {
@@ -969,7 +974,7 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 /* Images / Video */
 img {
 	width: auto\9; /* ie8 */
-	max-width: 100%;
+	max-width: 95%;
 	height: auto;
 	vertical-align: bottom;
 }
@@ -983,7 +988,7 @@ video {
 
 /* Table */
 table {
-	width: 100%;
+	width: auto;
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 	border-spacing: 0;
@@ -1001,6 +1006,7 @@ th {
 
 th {
 	font-weight: 700;
+	background-color: #f5f5f5;
 }
 
 /* Forms */
